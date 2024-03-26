@@ -12,6 +12,7 @@ class HomeController extends GetxController {
   late PageController _pageController;
   int currentPage = 0;
 
+//GETTERS
   HomeModel get model => _model;
   Timer get timer => _timer;
   Timer get innertimer => _innerTimer;
@@ -24,6 +25,7 @@ class HomeController extends GetxController {
     _startInnerTimer();
     _pageController = PageController(initialPage: 0);
   }
+
 //  IT KEEPS ON RUNNING THROHGHOUT THE APPLICATION AND MAKE SURE THE IMAGE CHANGER TIMER TO RESTART AGAIN WHEN NAVIGATE BACK TO THE PAGE WITHOUT RELOADING
   void _startTimer() {
     _timer = Timer.periodic(Duration(seconds: 3), (Timer timer) {
@@ -32,6 +34,7 @@ class HomeController extends GetxController {
       }
     });
   }
+
 //  IT START TIMER BY WHICH IMAGES INDEXES ARE CHANGING
   void _startInnerTimer() {
     _innerTimer = Timer.periodic(Duration(seconds: 3), (Timer innerTimer) {
@@ -47,12 +50,12 @@ class HomeController extends GetxController {
       );
     });
   }
-
+  //ON PAGE CHANGES OF PAGEVIEW.BUILDER
   void onPageChanged(int index) {
     currentPage = index;
     update();
   }
-
+  
   @override
   void onClose() {
     _timer.cancel();

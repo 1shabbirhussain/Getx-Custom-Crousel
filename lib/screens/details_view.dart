@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 
 class DetailsScreen extends StatefulWidget {
-  // final DataModel data;
   final String image;
   const DetailsScreen({Key? key,  required this.image}) : super(key: key);
 
@@ -34,6 +33,7 @@ class _DetailsScreenState extends State<DetailsScreen> {
               flex: 3,
               child: Padding(
                 padding: const EdgeInsets.all(20.0),
+                //HERO USED FOR ANIMATION 
                 child: Hero(
                   tag: widget.image,
                   child: Container(
