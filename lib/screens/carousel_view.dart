@@ -2,7 +2,7 @@
 import 'dart:math';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:asdfg/screens/details.dart';
+import 'package:asdfg/screens/details_view.dart';
 import 'carousel_controller.dart';
 
 class MyCustomCarousel extends StatelessWidget {
@@ -19,7 +19,7 @@ class MyCustomCarousel extends StatelessWidget {
               padding: EdgeInsets.all(40.0),
               child: Center(
                 child: Text(
-                  "Find Your Style",
+                  "Custom Carousel",
                   style: TextStyle(
                     fontWeight: FontWeight.bold,
                     color: Colors.black87,
@@ -86,7 +86,7 @@ class MyCustomCarousel extends StatelessWidget {
                     color: Colors.white,
                     borderRadius: BorderRadius.circular(30),
                     image: DecorationImage(
-                      image: AssetImage(image),
+                      image: NetworkImage(image),
                       fit: BoxFit.fill,
                     ),
                     boxShadow: const [
@@ -105,7 +105,7 @@ class MyCustomCarousel extends StatelessWidget {
         const Padding(
           padding:  EdgeInsets.only(top: 20),
           child:  Text(
-            "data.title",
+            "Title",
             style: TextStyle(
               color: Colors.black45,
               fontSize: 25,
@@ -116,7 +116,7 @@ class MyCustomCarousel extends StatelessWidget {
         const Padding(
           padding: EdgeInsets.all(8.0),
           child: Text(
-            "\${data.price}",
+            "Sub-Title",
             style: TextStyle(
               color: Colors.black87,
               fontSize: 16,

@@ -3,9 +3,14 @@ import 'package:get/get.dart';
 
 class HomeModel {
   final List<String> images = [
-    "assets/images/fashion1.jpeg",
-    "assets/images/fashion2.jpeg",
-    "assets/images/fashion3.jpg",
-    "assets/images/fashion4.png",
+    "https://wallpapercave.com/wp/wp4181170.jpg",
+    "https://wallpapercave.com/wp/wp5129073.jpg",
+    "https://wallpapercave.com/wp/wp5129106.jpg",
+    "https://wallpapercave.com/wp/wp5129071.jpg",
+
+    // "assets/images/fashion1.jpeg",
+    // "assets/images/fashion2.jpeg",
+    // "assets/images/fashion3.jpg",
+    // "assets/images/fashion4.png",
   ];
 }

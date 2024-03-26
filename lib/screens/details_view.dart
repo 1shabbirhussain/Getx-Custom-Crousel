@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 
 class DetailsScreen extends StatefulWidget {
   // final DataModel data;
-  final image;
-  const DetailsScreen({Key? key,  this.image}) : super(key: key);
+  final String image;
+  const DetailsScreen({Key? key,  required this.image}) : super(key: key);
 
   @override
   _DetailsScreenState createState() => _DetailsScreenState();
@@ -20,30 +20,28 @@ class _DetailsScreenState extends State<DetailsScreen> {
       ),
       body: Column(
         children: <Widget>[
-          Padding(
-            padding: const EdgeInsets.only(bottom: 20),
-            // child: Text(
-            //   widget.data.title,
-            //   style: const TextStyle(
-            //       color: Colors.black87,
-            //       fontSize: 25,
-            //       fontWeight: FontWeight.bold),
-            // ),
+          const Padding(
+            padding:  EdgeInsets.only(bottom: 20),
+            child: Text(
+              "Title",
+              style:  TextStyle(
+                  color: Colors.black87,
+                  fontSize: 25,
+                  fontWeight: FontWeight.bold),
+            ),
           ),
           Expanded(
               flex: 3,
               child: Padding(
                 padding: const EdgeInsets.all(20.0),
                 child: Hero(
-                  // tag: widget.data.imageName,
                   tag: widget.image,
                   child: Container(
                     decoration: BoxDecoration(
                         color: Colors.white,
                         borderRadius: BorderRadius.circular(30),
                         image: DecorationImage(
-                            image: AssetImage(
-                              // widget.data.imageName,
+                            image: NetworkImage(
                               widget.image,
                             ),
                             fit: BoxFit.fill),
@@ -56,17 +54,17 @@ class _DetailsScreenState extends State<DetailsScreen> {
                   ),
                 ),
               )),
-          Expanded(
+          const Expanded(
             flex: 1,
             child: Padding(
-              padding: const EdgeInsets.only(bottom: 20),
-              // child: Text(
-              //   "Price \$${widget.data.price}",
-              //   style: const TextStyle(
-              //       color: Colors.black54,
-              //       fontSize: 24,
-              //       fontWeight: FontWeight.bold),
-              // ),
+              padding:  EdgeInsets.only(bottom: 20),
+              child: Text(
+                "Sub-Title",
+                style:  TextStyle(
+                    color: Colors.black54,
+                    fontSize: 24,
+                    fontWeight: FontWeight.bold),
+              ),
             ),
           ),
         ],

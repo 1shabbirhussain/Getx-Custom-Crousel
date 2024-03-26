@@ -21,7 +21,7 @@ class HomeController extends GetxController {
   void onInit() {
     super.onInit();
     _startTimer();
-    // _startInnerTimer();
+    _startInnerTimer();
     _pageController = PageController(initialPage: 0);
   }
 //  IT KEEPS ON RUNNING THROHGHOUT THE APPLICATION AND MAKE SURE THE IMAGE CHANGER TIMER TO RESTART AGAIN WHEN NAVIGATE BACK TO THE PAGE WITHOUT RELOADING
