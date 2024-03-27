@@ -49,7 +49,7 @@ class MyCustomCarousel extends StatelessWidget {
       ),
     );
   }
-
+  // ANIMATION CODE
   Widget carouselView(HomeController controller, int index) {
     return AnimatedBuilder(
       animation: controller.pageController,
@@ -67,13 +67,14 @@ class MyCustomCarousel extends StatelessWidget {
       },
     );
   }
-
+//ACTUAL VIEW OF CAROUSEL
   Widget carouselCard(String image) {
     return Column(
       children: <Widget>[
         Expanded(
           child: Padding(
             padding: const EdgeInsets.all(20.0),
+            //hero for animation WITH SAME UNIQUE TAG
             child: Hero(
               tag: image,
               child: GestureDetector(

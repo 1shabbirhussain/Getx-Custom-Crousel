@@ -9,14 +9,11 @@ void main() {
 class MyApp extends StatelessWidget {
   MyApp({Key? key}) : super(key: key);
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
-        title: "My Navigation",
+        title: "My Carousel",
         debugShowCheckedModeBanner: false,
-        // home: HomeScreen()
-        // home: MyCarousel(),
         home: MyCustomCarousel(),
         );
   }
