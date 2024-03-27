@@ -2,8 +2,8 @@
 import 'dart:math';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:asdfg/screens/details_view.dart';
-import 'carousel_controller.dart';
+import '../controllers/carousel_controller.dart';
+import 'details_view.dart';
 
 class MyCustomCarousel extends StatelessWidget {
   final HomeController controller = Get.put(HomeController());

@@ -3,7 +3,7 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import 'carousel_model.dart';
+import '../models/carousel_model.dart';
 
 class HomeController extends GetxController {
   final HomeModel _model = HomeModel();
